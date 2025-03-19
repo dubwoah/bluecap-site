@@ -42,18 +42,19 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: -0.5px;
 }
 
 .nav-links a {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .nav-links a:hover {
@@ -175,6 +176,10 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+    
+    .logo {
+        font-size: 1.75rem;
     }
     
     .hero h1 {
