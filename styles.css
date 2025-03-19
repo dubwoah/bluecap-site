@@ -57,7 +57,8 @@ nav {
     font-size: 1.1rem;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--primary-color);
 }
 
@@ -129,6 +130,44 @@ footer {
     color: var(--white);
 }
 
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    background-color: #f8fafc;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -149,5 +188,9 @@ footer {
     
     .hero {
         padding: 6rem 1rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 } 
