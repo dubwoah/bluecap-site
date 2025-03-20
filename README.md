@@ -44,4 +44,6 @@ To run the site locally:
 
 - HTML5
 - CSS3
-- Google Fonts (Inter) 
+- Google Fonts (Inter)
+
+Last updated: 2024-03-19 
