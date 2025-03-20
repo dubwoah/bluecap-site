@@ -16,6 +16,7 @@
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="BlueCap Logo">
             </a>
+            <button class="mobile-menu-button">☰</button>
             <div class="nav-links">
                 <a href="software.html" class="active">Software</a>
                 <a href="services.html">Services</a>
@@ -82,5 +83,22 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html> 
