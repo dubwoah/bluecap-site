@@ -88,17 +88,37 @@
         // Mobile menu toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const navLinks = document.querySelector('.nav-links');
+        let isMenuOpen = false;
 
-        mobileMenuButton.addEventListener('click', () => {
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
             navLinks.classList.toggle('active');
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+        }
+
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-                navLinks.classList.remove('active');
+            if (!navLinks.contains(e.target) && !mobileMenuButton.contains(e.target) && isMenuOpen) {
+                toggleMenu();
             }
         });
+
+        // Handle touch events
+        navLinks.addEventListener('touchstart', (e) => {
+            e.stopPropagation();
+        });
+
+        // Prevent body scroll when menu is open
+        navLinks.addEventListener('touchmove', (e) => {
+            if (isMenuOpen) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     </script>
 </body>
 </html> 
