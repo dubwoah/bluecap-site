@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bluecap</title>
+  <title>BlueCap</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-  <!-- Google Calendar Appointment Scheduling -->
-  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <style>
     body {
       font-family: 'Playfair Display', serif;
@@ -41,18 +38,14 @@
         BlueCap helps established businesses adopt and scale AI initiatives —<br class="hidden sm:block">
         and helps startups build products that scale inside them.<br class="hidden sm:block">
       </p>
-      <!-- Google Calendar Button -->
-      <div id="lets-talk-button"></div>
-      <script>
-        window.addEventListener('load', function () {
-          calendar.schedulingButton.load({
-            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0fqpTRY01y-3tfAccLy7C08VQh4pNCcXK9odoBFSMX6_AHlxgFvt7vVgEn0H8d__KzDrMhMYFs?gv=true',
-            color: '#ffffff',
-            label: "Let’s Talk",
-            target: document.getElementById('lets-talk-button'),
-          });
-        });
-      </script>
+
+      <!-- Custom "Let’s Talk" Button -->
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0fqpTRY01y-3tfAccLy7C08VQh4pNCcXK9odoBFSMX6_AHlxgFvt7vVgEn0H8d__KzDrMhMYFs?gv=true"
+         target="_blank"
+         class="inline-block bg-white text-[#004aad] px-6 py-3 rounded hover:bg-gray-100 font-medium transition"
+         style="font-family: 'Playfair Display', serif;">
+        Let’s Talk
+      </a>
     </div>
   </main>
 
